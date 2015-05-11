@@ -1,0 +1,22 @@
+{
+  "name": "AdventureGame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "adventure.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathan-j-brenner/AdventureGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathan-j-brenner/AdventureGame/issues"
+  },
+  "homepage": "https://github.com/nathan-j-brenner/AdventureGame",
+  "dependencies": {
+    "jsi-gamelib": "git://github.com/portlandcodeschool/jsi-gamelib.git"
+  }
+}

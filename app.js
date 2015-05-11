@@ -50,7 +50,7 @@ var roomD = function(){
 	console.log("You are in room D. There are two doors: Choose north or south");
 	rl.question("Which direction do you want to go?", function(direction){
 		if(direction==="north"){
-			console.log("You are in room G");
+			roomG();
 		} else if (direction==="south"){
 			roomA();
 		} else{
@@ -80,6 +80,63 @@ var roomF = function(){
 			rl.close();
 		}
 	});
+};
+
+var roomG = function(){
+	console.log("You are in room G. There are two doors: Choose north or south");
+	rl.question("Which direction do you want to go?", function(direction){
+		if(direction==="north"){
+			roomH();
+		} else if (direction==="south"){
+			roomD();
+		} else{
+			rl.close();
+		}
+	});
+};
+
+var roomH = function(){
+	console.log("You are in room H. There are two doors: Choose south or east");
+	rl.question("Which direction do you want to go?", function(direction){
+		if(direction==="south"){
+			roomG();
+		} else if (direction==="east"){
+			roomI();
+		} else{
+			rl.close();
+		}
+	});
+};
+
+var roomI = function(){
+	console.log("You are now in room I. There are two doors: Choose east or west");
+	rl.question("Which direction do you want to go?", function(direction){
+		if(direction==="east"){
+			roomH();
+		} else if (direction==="west"){
+			roomJ();
+		} else {
+			rl.close();
+		}
+	});
+};
+
+var roomJ = function(){
+	console.log("You are now in room J. There are two doors: Choose east or west");
+	rl.question("Which direction do you want to go?", function(direction){
+		if(direction==="east"){
+			roomI();
+		} else if (direction==="west"){
+			roomK();
+		} else {
+			rl.close();
+		}
+	});
+};
+
+var roomK = function(){
+	console.log("You found the end");
+	rl.close();
 };
 
 console.log("You are at the beginning of a new Adventure.");

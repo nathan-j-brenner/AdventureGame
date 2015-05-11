@@ -24,10 +24,12 @@ var rl = readline.createInterface({
 rl.question("Which direction do you want to go?", function(direction){
 	if(direction === "north"){
 		console.log("You are now located in Room E");
+		console.log("You are now in a room with two doors: One door to the south and one door to the east.")
+		rl.question("Which direction do you want to go?")
 	} else if(direction === "west"){
 		console.log("You are now located in Room A");
 	} else if(direction === "east"){
-		console.log("You are now located in Room C.");
+		console.log("You are now located in Room C. You are at a dead end.");
 	}
 	rl.close();
 });

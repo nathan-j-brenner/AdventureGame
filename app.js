@@ -25,7 +25,7 @@ var roomB = function(){
 	console.log("You are now in room B. There are three doors: Choose north, east, or west");
 	rl.question("Which direction do you want to go?", function(direction){
 		if(direction==="north"){
-			console.log("You are in room E");
+			roomE();
 		} else if (direction==="east"){
 			roomC();
 		} else if (direction==="west"){
@@ -37,7 +37,7 @@ var roomB = function(){
 };
 
 var roomC = function(){
-	rl.question("You are now in room C. This is a dead end, and there is only one way out of this room.  Choose west to backtrack your steps", function(direction){
+	rl.question("You are now in room C. This is a dead end, and there is only one way out of this room.  Choose west to backtrack your steps.", function(direction){
 		if(direction==="west"){
 			roomB();
 		} else{
@@ -73,7 +73,7 @@ var roomE = function(){
 };
 
 var roomF = function(){
-	rl.question("You are now in room F. This is a dead end, and there is only one way out of this room.  Choose west to backtrack your steps", function(direction){
+	rl.question("You are now in room F. This is a dead end, and there is only one way out of this room.  Choose west to backtrack your steps.", function(direction){
 		if(direction==="west"){
 			roomE();
 		} else{
@@ -112,9 +112,9 @@ var roomI = function(){
 	console.log("You are now in room I. There are two doors: Choose east or west");
 	rl.question("Which direction do you want to go?", function(direction){
 		if(direction==="east"){
-			roomH();
-		} else if (direction==="west"){
 			roomJ();
+		} else if (direction==="west"){
+			roomH();
 		} else {
 			rl.close();
 		}
@@ -125,9 +125,9 @@ var roomJ = function(){
 	console.log("You are now in room J. There are two doors: Choose east or west");
 	rl.question("Which direction do you want to go?", function(direction){
 		if(direction==="east"){
-			roomI();
-		} else if (direction==="west"){
 			roomK();
+		} else if (direction==="west"){
+			roomI();
 		} else {
 			rl.close();
 		}

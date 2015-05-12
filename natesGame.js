@@ -9,8 +9,8 @@ var rl = readline.createInterface({
 });
 
 var entrance = function(){
-	console.log("You just walked into his house. There's a set of stairs leading up or down");
-	rl.question("Which direction do you want to go?", function(direction){
+	console.log("You just walked into his house. There's a set of stairs leading up or down. ");
+	rl.question("Which direction do you want to go? ", function(direction){
 		if(direction==="up"){
 			hallway();
 		} else if (direction==="down"){
@@ -22,8 +22,8 @@ var entrance = function(){
 };
 
 var hallway = function(){
-	console.log("You are now in the hallway. On this floor, you have three areas to search: living room, kitchen, or down the hallway");
-	rl.question("Which room do you want to search?", function(direction){
+	console.log("You are now in the hallway. On this floor, you have three areas to search: living room, kitchen, or down the hallway. ");
+	rl.question("Which room do you want to search? ", function(direction){
 		if(direction==="living room"){
 			livingRoom();
 		} else if (direction==="kitchen"){
@@ -37,8 +37,8 @@ var hallway = function(){
 };
 
 var livingRoom = function(){
-	console.log("You are now in the living room.  No laptop here. You can go look in the dining room, or go back to the hallway.");
-	rl.question("Which room do you want to search next?", function(direction){
+	console.log("You are now in the living room.  No laptop here. You can go look in the dining room, or go back to the hallway. ");
+	rl.question("Which room do you want to search next? ", function(direction){
 		if(direction==="dining room"){
 			diningRoom();
 		} else if (direction==="hallway"){
@@ -50,8 +50,8 @@ var livingRoom = function(){
 };
 
 var diningRoom = function(){
-	console.log("You are now in the dining room, and still no laptop in sight. You can go outside and look on the deck or you can look in the kitchen");
-	rl.question("Which room do you want to search next?", function(direction){
+	console.log("You are now in the dining room, and still no laptop in sight. You can go outside and look on the deck or you can look in the kitchen. ");
+	rl.question("Which room do you want to search next? ", function(direction){
 		if(direction==="outside"){
 			outside();
 		} else if(direction==="kitchen"){
@@ -63,8 +63,8 @@ var diningRoom = function(){
 };
 
 var kitchen = function(){
-	console.log("You are now in the kitchen.  There's some plates in the sink and cat footprints on the counters, but no laptop.  You can go back into the hallway or back to the dining room");
-	rl.question("Which room do you want to search next?", function(direction){
+	console.log("You are now in the kitchen.  There's some plates in the sink and cat footprints on the counters, but no laptop.  You can go back into the hallway or back to the dining room. ");
+	rl.question("Which room do you want to search next? ", function(direction){
 		if(direction==="hallway"){
 			hallway();
 		} else if(direction==="dining room"){
@@ -76,8 +76,8 @@ var kitchen = function(){
 };
 
 var outside = function(){
-	console.log("This is a big backyard, so lets just keep it in the house.");
-	rl.question("Do you want to go back in the house from the dining room or walk down the stairs and go into the garage?", function(direction){
+	console.log("This is a big backyard, so lets just keep it in the house. ");
+	rl.question("Do you want to go back in the house from the dining room or walk down the stairs and go into the garage? ", function(direction){
 		if(direction==="dining room"){
 			diningRoom();
 		} else if(direction==="garage"){
@@ -89,8 +89,8 @@ var outside = function(){
 };
 
 var downHallway = function(){
-	console.log("This hallway has four rooms to search: bathroom, master bedroom, the guest room, the nursery, or back to the main entrance");
-	rl.question("Which room do you want to search?", function(direction){
+	console.log("This hallway has four rooms to search: bathroom, master bedroom, the guest room, the nursery, or back to the main entrance. ");
+	rl.question("Which room do you want to search? ", function(direction){
 		if(direction==="bathroom"){
 			bathroom();
 		} else if(direction==="master bedroom"){
@@ -108,7 +108,7 @@ var downHallway = function(){
 };
 
 var bathroom = function(){
-	console.log("You're in the bathroom, and there's nothing here but take your time");
+	console.log("You're in the bathroom, and there's nothing here but take your time ");
 	rl.question("Once you're ready to continue, go back to the hallway to keep looking", function(direction){
 		if(direction==="hallway"){
 			downHallway();
@@ -119,8 +119,8 @@ var bathroom = function(){
 };
 
 var masterBedroom = function(){
-	console.log("You're in his bedroom.  Everything looks pretty cleaned up and there's no laptop in site");
-	rl.question("Are you ready to keep looking?", function(direction){
+	console.log("You're in his bedroom.  Everything looks pretty cleaned up and there's no laptop in site ");
+	rl.question("Are you ready to keep looking? ", function(direction){
 		if(direction==="yes"){
 			downHallway();
 		} else if(direction==="no"){
@@ -131,8 +131,8 @@ var masterBedroom = function(){
 	});
 };
 var guestRoom = function(){
-	console.log("You're in the guest room. This room is pretty messy since it's not used very much but there's no laptop in site");
-	rl.question("Are you ready to keep looking?", function(direction){
+	console.log("You're in the guest room. This room is pretty messy since it's not used very much but there's no laptop in site ");
+	rl.question("Are you ready to keep looking? ", function(direction){
 		if(direction==="yes"){
 			downHallway();
 		} else if(direction==="no"){
@@ -143,8 +143,8 @@ var guestRoom = function(){
 	});
 };
 var nursery = function(){
-	console.log("You're in the nursery.  This room lacks furniture, so it's pretty evident there's no laptop here.");
-	rl.question("Are you ready to keep looking?", function(direction){
+	console.log("You're in the nursery.  This room lacks furniture, so it's pretty evident there's no laptop here. ");
+	rl.question("Are you ready to keep looking? ", function(direction){
 		if(direction==="yes"){
 			downHallway();
 		} else if(direction==="no"){
@@ -155,12 +155,12 @@ var nursery = function(){
 	});
 };
 var library = function(){
-	console.log("You're in the library. There's a kegorator and a reading chair with a bunch of books on bookshelves.  After you looked around, you didn't see any laptop but there are some more rooms down here.")
-	rl.question("From here, pick one of the rooms to go look: the garage, the laundry room, and the office", function(direction){
-		if(direction===garage){
+	console.log("You're in the library. There's a kegorator and a reading chair with a bunch of books on bookshelves.  After you looked around, you didn't see any laptop but there are some more rooms down here. ");
+	rl.question("From here, pick one of the rooms to go look: the garage, the laundry room, and the office. ", function(direction){
+		if(direction==="garage"){
 			garage();
 		} else if(direction==="laundry room"){
-			laundryRoom();
+			laundry();
 		} else if(direction==="office"){
 			office();
 		} else{
@@ -169,8 +169,8 @@ var library = function(){
 	});
 };
 var garage = function(){
-	console.log("After looking for a while in here, there's no laptop to be found.  You can go outside or go back inside");
-	rl.question("Where do you want to go?", function(direction){
+	console.log("After looking for a while in here, there's no laptop to be found.  You can go outside or go back inside. ");
+	rl.question("Where do you want to go? ", function(direction){
 		if(direction==="inside"){
 			library();
 		}else if(direction==="outside") {
@@ -179,9 +179,9 @@ var garage = function(){
 			rl.close();
 		}
 	});
-}
+};
 var laundry = function(){
-	console.log("Say hi to Virgil, but don't let him out of this room and close the door quickly.  No laptop in there");
+	console.log("Say hi to Virgil, but don't let him out of this room and close the door quickly.  No laptop in there. ");
 	library();
 };
 var office = function(){
@@ -190,5 +190,5 @@ var office = function(){
 };
 
 
-console.log("You're at Nate's house in Troutdale. He's sent you to find his laptop.  Good Luck");
+console.log("You're at Nate's house in Troutdale. He's sent you to find his laptop.  Good Luck ");
 entrance();
